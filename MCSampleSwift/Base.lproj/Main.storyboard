@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MCSampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GCb-GM-iSA">
+                                <rect key="frame" x="0.0" y="20" width="600" height="242"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MSu-g5-DLv">
+                                <rect key="frame" x="20" y="270" width="457" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCS-uO-BUZ">
+                                <rect key="frame" x="529" y="270" width="51" height="30"/>
+                                <state key="normal" title="Browse"/>
+                                <connections>
+                                    <action selector="showBrowser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="beN-tL-oDl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZO-oP-T9Z">
+                                <rect key="frame" x="485" y="270" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendChat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CqD-y2-OSE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CCS-uO-BUZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2ps-Kx-Jyp"/>
+                            <constraint firstItem="GCb-GM-iSA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="81h-3l-lFA"/>
+                            <constraint firstItem="NZO-oP-T9Z" firstAttribute="leading" secondItem="MSu-g5-DLv" secondAttribute="trailing" constant="8" id="B2f-Cw-Asy"/>
+                            <constraint firstItem="MSu-g5-DLv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BAR-pf-syH"/>
+                            <constraint firstItem="GCb-GM-iSA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="BfQ-iU-188"/>
+                            <constraint firstItem="CCS-uO-BUZ" firstAttribute="leading" secondItem="NZO-oP-T9Z" secondAttribute="trailing" constant="8" id="OD5-Nn-eAf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MSu-g5-DLv" secondAttribute="bottom" constant="300" id="axv-Uk-upA"/>
+                            <constraint firstItem="NZO-oP-T9Z" firstAttribute="centerY" secondItem="MSu-g5-DLv" secondAttribute="centerY" id="eZr-Fs-56e"/>
+                            <constraint firstItem="MSu-g5-DLv" firstAttribute="top" secondItem="GCb-GM-iSA" secondAttribute="bottom" constant="8" id="kAq-jn-Fqe"/>
+                            <constraint firstItem="CCS-uO-BUZ" firstAttribute="centerY" secondItem="NZO-oP-T9Z" secondAttribute="centerY" id="t0X-El-h5j"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GCb-GM-iSA" secondAttribute="trailing" constant="-20" id="zFX-gM-7m5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chatView" destination="GCb-GM-iSA" id="p0K-7z-cID"/>
+                        <outlet property="messageField" destination="MSu-g5-DLv" id="DT7-oI-hR8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="435" y="389"/>
+        </scene>
+    </scenes>
+</document>
