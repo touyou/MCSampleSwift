@@ -100,7 +100,7 @@ extension ViewController: MCSessionDelegate {
     // MARK: データを受信し終わった時
     func session(session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, atURL localURL: NSURL, withError error: NSError?) {
     }
-    // MARK: ストリームが確立ci された時
+    // MARK: ストリームが確立ci された時
     func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
     }
     // MARK: 他のpeerの状態が変化した時
